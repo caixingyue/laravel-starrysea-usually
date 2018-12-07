@@ -39,7 +39,7 @@ composer require starrysea/usually
 ```bash
 $app->register(Starrysea\Usually\ConvertServiceProvider::class); // 注册 Convert 服务提供者
 
-class_alias('Starrysea\Usually\Convert::class', 'Convert'); // 添加 Convert 门面
+class_alias(Starrysea\Usually\Convert::class, 'Convert'); // 添加 Convert 门面
 ```
 
 ## 用法
