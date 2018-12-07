@@ -1,0 +1,42 @@
+{
+    "name": "starrysea/usually",
+    "description": "Here is the definition that often needs to be used to make development easier.",
+    "homepage": "https://github.com/caixingyue/laravel-starrysea-usually",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "caixingyue",
+            "email": "917373332@qq.com"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/caixingyue/laravel-starrysea-usually/issues"
+    },
+    "require": {
+        "php": "^7.0"
+	},
+	"autoload": {
+        "psr-4": {
+            "Starrysea\\Usually\\": "src"
+        },
+        "files": [
+            "pscws4/PSCWS4.php",
+            "pscws4/XDB_R.php"
+        ]
+    },
+	"autoload-dev": {
+        "psr-4": {
+            "Starrysea\\Usually\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Starrysea\\Usually\\ConvertServiceProvider"
+            ],
+            "aliases": {
+                "Convert": "Starrysea\\Usually\\Convert"
+            }
+        }
+    }
+}
