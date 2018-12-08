@@ -18,13 +18,14 @@ class Convert
     /**
      * 过滤特殊字符与空格
      * @param string $data 字符串
+     * @param string $replacement 过滤时替换的字符串, 默认空
      * @return string 过滤后的字符串
      */
-    public static function filtercharacter(string $data)
+    public static function filtercharacter(string $data, string $replacement = '')
     {
         $char = "# #。、！？：；﹑•＂…‘’“”〝〞∕¦‖—　〈〉﹞﹝「」‹›〖〗】【»«』『〕〔》《﹐¸﹕︰﹔！¡？¿﹖﹌﹏﹋＇´ˊˋ―﹫︳︴¯＿￣﹢﹦﹤‐­˜﹟﹩﹠﹪﹡﹨﹍﹉﹎﹊ˇ︵︶︷︸︹︿﹀︺︽︾ˉ﹁﹂﹃﹄︻︼（）";
         $pattern = ['/[[:punct:]]/i', '/[' . $char . ']/u', '/[ ]{2,}/'];
-        $data = preg_replace($pattern, '', $data);
+        $data = preg_replace($pattern, $replacement, $data);
         return $data;
     }
 
