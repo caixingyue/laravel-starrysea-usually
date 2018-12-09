@@ -12,7 +12,7 @@
 composer require starrysea/usually
 ```
 
-在 Laravel 5.6 中，服务提供商将自动注册。在旧版本的框架中，只需在 config/app.php 文件中添加服务提供程序：
+在 Laravel 5.6 中，服务提供商将自动注册。在旧版本的框架中，只需在 `config/app.php` 文件中添加服务提供程序：
 
 ```php
 'providers' => [
@@ -36,7 +36,7 @@ composer require starrysea/usually
 
 注册服务提供者和门面：
 
-```bash
+```php
 $app->register(Starrysea\Usually\ConvertServiceProvider::class); // 注册 Convert 服务提供者
 
 class_alias(Starrysea\Usually\Convert::class, 'Convert'); // 添加 Convert 门面
